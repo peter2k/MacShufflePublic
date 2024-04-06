@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>MacShuffle</title>
+        <item>
+            <title>Version 1.0</title>
+            <pubDate>Sun, 07 Apr 2024 23:13:51 +0200</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/peter2k/MacShufflePublic/releases/download/1.0.0/MacShuffle.dmg" length="1522715" type="application/octet-stream" sparkle:edSignature="QMYO0NgupENVKKILIj2Ia2FJiAQN38TaECCJj8gX1JfZBEnsUX4waIuP5BjViowCQupqEdZgdS08AwoZfDVbAA=="/>
+            <description sparkle:format="plain-text">
+- Initial release
+            </description>
+            <sparkle:fullReleaseNotesLink>https://github.com/peter2k/MacShufflePublic/releases/</sparkle:fullReleaseNotesLink>
+        </item>
+    </channel>
+</rss>
