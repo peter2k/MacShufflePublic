@@ -3,16 +3,21 @@
     <channel>
         <title>MacShuffle</title>
         <item>
-            <title>Version 1.0</title>
-            <pubDate>Sun, 07 Apr 2024 23:13:51 +0200</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/peter2k/MacShufflePublic/releases/download/1.0.0/MacShuffle.dmg" length="1522715" type="application/octet-stream" sparkle:edSignature="QMYO0NgupENVKKILIj2Ia2FJiAQN38TaECCJj8gX1JfZBEnsUX4waIuP5BjViowCQupqEdZgdS08AwoZfDVbAA=="/>
-            <description sparkle:format="plain-text">
-- Initial release
-            </description>
+            <title>1.0.1</title>
+            <pubDate>Mon, 19 May 2025 23:54:15 +0200</pubDate>
             <sparkle:fullReleaseNotesLink>https://github.com/peter2k/MacShufflePublic/releases/</sparkle:fullReleaseNotesLink>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h1>IMPORTANT!</h1>
+!!! The update mechanism is broken for the current version.</br>
+Please visit <a href="https://github.com/peter2k/MacShufflePublic/releases/">https://github.com/peter2k/MacShufflePublic/releases/</a> to install the update manually.</br></br>
+<hr></br>
+- Fixed the app icon</br>
+- Stop opening the last accessed folder upon app launch</br>
+- Fixed auto update mechanism
+]]></description>
+            <enclosure url="https://github.com/peter2k/MacShufflePublic/releases/download/1.0.1/MacShuffle.dmg" length="1555526" type="application/octet-stream" sparkle:edSignature="COZm3rmbw/pJxu8JYe0kA8bdiE+/4STSPfKdXVydA7QBARLyoJRX9HECywO8kETaS7mERbV6x3aTMTDmkxMuCA=="/>
         </item>
     </channel>
 </rss>
