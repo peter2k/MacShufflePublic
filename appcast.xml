@@ -3,6 +3,23 @@
     <channel>
         <title>MacShuffle</title>
         <item>
+            <title>1.1.0</title>
+            <pubDate>Tue, 27 May 2025 23:16:54 +0200</pubDate>
+            <sparkle:fullReleaseNotesLink>https://github.com/peter2k/MacShufflePublic/releases/</sparkle:fullReleaseNotesLink>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+            <description><![CDATA[- Prefetch images, it is now much quicker to navigate between images.</br>
+- Use CMD+I to display items of the current folder in the sidebar.</br>
+- Hold the back or forward icon to reveal the history.</br>
+
+</br>
+<hr>
+<a href="https://github.com/peter2k/MacShufflePublic/releases/">All releases</a>
+]]></description>
+            <enclosure url="https://github.com/peter2k/MacShufflePublic/releases/download/1.1.0/MacShuffle.dmg" length="1620356" type="application/octet-stream" sparkle:edSignature="Xg80BOYYYxD2TgN9yeS113tYHzbJRgWYDL1olodgT+K7MFd1WvZO5W1zBmL87vNbatFZUn4xy/afDyFVsbeLAQ=="/>
+        </item>
+        <item>
             <title>1.0.1</title>
             <pubDate>Mon, 19 May 2025 23:54:15 +0200</pubDate>
             <sparkle:fullReleaseNotesLink>https://github.com/peter2k/MacShufflePublic/releases/</sparkle:fullReleaseNotesLink>
