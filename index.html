@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="MacShuffle: macOS App to display random pictures or videos." />
+  <meta property="og:description" content="MacShuffle is a native Mac app that allows you to display random pictures or play random videos from a folder." />
+  <meta property="og:url" content="https://macshuffleapp.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://macshuffleapp.com/ogimage.jpg" />
+  <meta property="og:image:alt"
+    content="MacShuffle is a native Mac app that allows you to display random pictures or play random videos from a folder." />
+  <meta property="og:site_name" content="MacShuffle" />
+
+  <title>MacShuffle: macOS App to display random pictures or videos.</title>
+  <meta name="description" content="MacShuffle is a native Mac app that allows you to display random pictures or play random videos from a folder.">
+
+  <link rel="icon" type="image/png" href="https://macshuffleapp.com/Icon32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+<body class="bg-black font-inter antialiased h-screen px-6 md:py-8">
+  <div class="relative isolate" style="z-index: -20;">
+    <div
+      class="absolute pointer-events-none inset-x-0 top-1/2 -translate-y-1/4 -translate-x-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
+      aria-hidden="true">
+      <div class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]"
+        style="clip-path:polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto max-w-4xl" class="[&_[x-cloak]]:hidden" x-data="{ videoSrc: '', modalOpen: false }">
+    <nav>
+      <div class="mx-auto max-w-6xl">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-shrink-0">
+            <a href="https://macshuffleapp.com/">
+              <div class="flex items-center">
+                <img class="aspect-auto max-w-12"
+                  src="https://macshuffleapp.com/Icon32x32.png"
+                  alt="MacShuffle" />&nbsp;&nbsp;
+                <span
+                  class="mt-0 font-extrabold text-lg text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">MacShuffle</span>
+              </div>
+            </a>
+          </div>
+          <div class="flex">
+            <a href="https://peter2k.github.io/MacShufflePublic/MacShuffle.dmg"
+              class="rounded-md px-3 py-2 text-sm font-bold underline text-green-600 hover:opacity-70"
+              target="_blank">Download free trial</a>
+            <a href="https://tadapps.lemonsqueezy.com/"
+              class="rounded-md px-3 py-2 text-sm font-bold underline text-green-600 hover:opacity-70"
+              target="_blank">Pricing</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Product Info -->
+    <div class="rounded-lg p-6 text-center">
+      <h1 class="mb-4 text-2xl py-16 md:py-8 text-gray-200 max-w-96 mx-auto">
+        MacShuffle displays random Images or plays random Videos from a Folder!
+      </h1>
+      <div class="text-right">
+        <span class="text-sm italic text-gray-600">Version 1.1.0 / 05.27.2025</span>
+      </div>
+    </div>
+    <!-- Modal backdrop -->
+    <div class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity" x-show="modalOpen"
+      x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100" x-transition:leave="transition ease-out duration-100"
+      x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" x-cloak></div>
+    <!-- End: Modal backdrop -->
+    <!-- Modal dialog -->
+    <div id="modal" class="fixed inset-0 z-[99999] flex p-6" role="dialog" aria-modal="true" x-show="modalOpen"
+      x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-75"
+      x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-out duration-200"
+      x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-75" x-cloak>
+      <div class="max-w-5xl mx-auto h-full flex items-center">
+        <div class="w-full max-h-full rounded-3xl shadow-2xl bg-black overflow-hidden"
+          @click.outside="modalOpen = false" @keydown.escape.window="modalOpen = false">
+          <video class="aspect-video"
+            x-init="$watch('videoSrc', () => $el.load()); $watch('modalOpen', function(value) { if (value) {$el.play()} else {$el.pause();$el.currentTime = 0;} })"
+            width="1920" height="1080" controls>
+            <source x-bind:src="videoSrc" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+    <!-- End: Modal dialog -->
+    <!-- Begin: Gallery -->
+    <div class="grid grid-cols-2 gap-y-12 gap-x-10">
+      <figure class="max-w-lg transition-transform duration-300 hover:scale-105">
+        <img class="w-full h-full object-cover rounded-2xl cursor-pointer" src="resources/random.png" alt="MacShuffle"
+          @click="videoSrc = 'resources/random.mov'; modalOpen = true" />
+        <figcaption class="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">MacShuffle</figcaption>
+      </figure>
+    </div>
+  </div>
+  <!-- End: Gallery -->
+  <div class="flex justify-center space-x-4 paddingtop pt-14 pb-10 text-gray-700">
+    <a href="https://twitter.com/kxkt06" target="_blank">Twitter</a>
+    <a href="https://github.com/peter2k/macshufflepublic/releases/" target="_blank">Releases</a>
+    <a href="https://www.tumblr.com/macshuffleapp/785007532223676416/terms-and-conditions?source=share" target="_blank">Terms of
+      Service</a>
+    <a href="https://www.tumblr.com/macshuffleapp/785007599218229249/privacy-policy?source=share" target="_blank">Privacy Policy</a>
+  </div>
+  </div>
+</body>
+
+</html>
