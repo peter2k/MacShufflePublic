@@ -3,6 +3,22 @@
     <channel>
         <title>MacShuffle</title>
         <item>
+            <title>1.1.2</title>
+            <pubDate>Tue, 24 Jun 2025 23:55:11 +0200</pubDate>
+            <sparkle:fullReleaseNotesLink>https://github.com/peter2k/MacShufflePublic/releases/</sparkle:fullReleaseNotesLink>
+            <sparkle:version>12</sparkle:version>
+            <sparkle:shortVersionString>1.1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+            <description><![CDATA[- Fixed sidebar item not always selectable</br>
+- Prevent items that have already been seen from being shown again</br>
+
+</br>
+<hr>
+<a href="https://github.com/peter2k/MacShufflePublic/releases/">All releases</a>
+]]></description>
+            <enclosure url="https://github.com/peter2k/MacShufflePublic/releases/download/1.1.2/MacShuffle.dmg" length="1634290" type="application/octet-stream" sparkle:edSignature="IlfLThItvPNdfOqjiSPp48OTnG5Xm20Lil4f2RDSQAQLXFIp7OS2Tn7C6rssLYE3gpsRA5ys06SeOS1l+G7ABA=="/>
+        </item>
+        <item>
             <title>1.1.1</title>
             <pubDate>Sat, 21 Jun 2025 00:15:45 +0200</pubDate>
             <sparkle:fullReleaseNotesLink>https://github.com/peter2k/MacShufflePublic/releases/</sparkle:fullReleaseNotesLink>
